@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-th-replace="~{fragment:: head-section}"></head>
+<body>
+
+<header data-th-replace="~{fragment:: header-section}"></header>
+
+<main>
+    <section>
+        <div data-th-replace= "~{fragment::link-section(url='/add-blog',name='Create blog')}"></div>
+        <!-- <div class="link-container">
+          <a href="/add-blog">Create Blog</a>
+        </div> -->
+
+        <artice class="blogs">
+            <div class="blog" data-th-each="blog, loop : ${blogs}">
+                <h2 data-th-text="${loop.index}"></h2>
+                <h2 data-th-text="${blog.heading}"></h2>
+                <p h2 data-th-text="${blog.description}"></p>
+                <a data-th-href="|/blog?id=${loop.index}|">Explore</a>
+            </div>
+            <!-- <div class="blog">
+              <h2>02</h2>
+              <h2>Heading-2</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit
+                numquam ab porro quas officiis eius debitis dolor in eaque
+                expedita, beatae sint, voluptatibus iure minima ut dignissimos
+                officia deserunt quae. Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Molestiae mollitia magni magnam ab numquam
+                veniam eum libero rerum commodi sunt nihil repellat consectetur
+                assumenda, eaque totam sint id corporis odio? Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit. Iure ea eum exercitationem
+                adipisci, ab quis illum! Eius sint sapiente delectus quidem nulla,
+                impedit nihil, dolores praesentium, rem consectetur voluptatum
+                fuga.
+              </p>
+              <a href="/blog">Explore</a>
+            </div>
+            <div class="blog">
+              <h2>03</h2>
+              <h2>Heading-3</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
+                similique quasi repudiandae iure totam molestiae quaerat
+                reprehenderit veniam fuga hic aspernatur qui quod, quia
+                consequatur tenetur aliquam placeat perferendis. Iste.
+              </p>
+              <a href="/blog">Explore</a>
+            </div> -->
+        </artice>
+    </section>
+</main>
+</body>
+</html>

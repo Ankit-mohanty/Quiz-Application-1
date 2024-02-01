@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-th-fragment="head-section">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoBlog</title>
+    <link rel="stylesheet" href="css/blogs.css" />
+</head>
+<body>
+<header data-th-fragment="header-section">
+    <h1>Mo Blog</h1>
+</header>
+<div class="link-container" data-th-fragment="link-section(url,name)">
+    <a data-th-href="${url}" data-th-text="${name}">Create Blog</a>
+</div>
+</body>
+</html>

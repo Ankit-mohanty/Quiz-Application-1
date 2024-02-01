@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+            integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+            crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <!-- we "/" because css file serch path in localhost:1200. Other wise if we make chages in url after define css file they can not find. -->
+    <title>Home</title>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="heading p-2">
+        <h1 data-th-text="${heading}"></h1>
+    </div>
+
+    <div class="dateTime">
+        <p>Date: <span data-th-text="${date}"></span></p>
+        <p>Time: <span data-th-text="${time}"></span></p>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <p><span data-th-text="${student1.name}"></span></p>
+                    </h4>
+                    <p class="card-text">(Java Developer)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <b>Qualification: </b>
+                        <span data-th-text="${student1.qualification}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Address: </b
+                        ><span data-th-text="${student1.location}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Email: </b><span data-th-text="${student1.email}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Mobile No: </b
+                        ><span data-th-text="${student1.contact}"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <p><span data-th-text="${student2.name}"></span></p>
+                    </h4>
+                    <p class="card-text">(Python Developer)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <b>Qualification: </b>
+                        <span data-th-text="${student2.qualification}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Address: </b
+                        ><span data-th-text="${student2.location}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Email: </b><span data-th-text="${student2.email}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Mobile No: </b
+                        ><span data-th-text="${student2.contact}"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <p><span data-th-text="${student3.name}"></span></p>
+                    </h4>
+                    <p class="card-text">(UPSC)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <b>Qualification: </b>
+                        <span data-th-text="${student3.qualification}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Address: </b
+                        ><span data-th-text="${student3.location}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Email: </b><span data-th-text="${student3.email}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Mobile No: </b
+                        ><span data-th-text="${student3.contact}"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <caption>
+            List of Courses
+        </caption>
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Sl.no</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Fees</th>
+        </tr>
+        </thead>
+        <tbody data-th-each="course:${courses}">
+        <tr>
+            <th scope="row" data-th-text="${course.slNo}"></th>
+            <td data-th-text="${course.coursename}"></td>
+            <td data-th-text="${course.duration}"></td>
+            <td data-th-text="${course.fee}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

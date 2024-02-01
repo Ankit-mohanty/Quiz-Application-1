@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello</title>
+  </head>
+  <body>
+    <h2>Spring Boot</h2>
+    <!-- <p data-th:text="${name}"></p>-->
+    <p data-th-text="${name}"></p>
+    <!--th:text process thymleaf engine.-->
+    <dl data-th-text="student, loop : ${students}">
+      <dt>Student</dt>
+      <dd data-th-text="|Student - ${loop.index + 1}|"></dd>
+      <dd data-th-text="${student.name}"></dd>
+      <dd data-th-text="${student.roll}"></dd>
+      <dd data-th-text="${student.fee}"></dd>
+    </dl>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-th-replace="~{fragment:: head-section}"></head>
+
+<body>
+<header data-th-replace="~{fragment:: header-section}"></header>
+
+<h1>Add Blog</h1>
+</header>
+<main>
+    <section>
+        <div data-th-replace= "~{fragment::link-section(url='/add-blog',name='Create blog')}"></div>
+        <div class="blog-container" data-th-object="${blog}"></div>
+        <h2 data-th-text="${blog.heading}">Heading - 1</h2>
+        <p data-th-text="${blog.description}">  </p>    </section>
+</main>
+</body>
+</html>

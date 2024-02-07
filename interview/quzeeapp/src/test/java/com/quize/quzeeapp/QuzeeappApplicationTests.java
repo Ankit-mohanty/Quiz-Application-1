@@ -1,10 +1,10 @@
-package blog.mo.MoBlog;
+package com.quize.quzeeapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MoBlogApplicationTests {
+class QuzeeappApplicationTests {
 
 	@Test
 	void contextLoads() {

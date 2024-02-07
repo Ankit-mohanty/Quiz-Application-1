@@ -1,13 +1,13 @@
-package blog.mo.MoBlog;
+package com.quize.quzeeapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MoBlogApplication {
+public class QuzeeappApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MoBlogApplication.class, args);
+		SpringApplication.run(QuzeeappApplication.class, args);
 	}
 
 }
